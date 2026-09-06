@@ -8,7 +8,7 @@ Releases describe usable outcomes and their proof, not just a bundle of commits.
 
 **Included:** public shell, auth/profile flow, protected navigation, settings shells, environment boundaries, migration-backed schema, initial row-level security, health check, CI, and design-system specimen.
 
-**Evidence:** formatting, lint, TypeScript, unit, production-build, browser, accessibility, migration, and RLS checks pass. No invitation or private contribution content is accepted yet.
+**Evidence:** formatting, lint, TypeScript, unit, production-build, browser, accessibility, migration, and RLS checks pass. A release tag additionally requires the hosted synthetic-auth smoke workflow described in the provider runbook. No invitation or private contribution content is accepted yet.
 
 ## Alpha 0.3 — Private-pair Exchange
 

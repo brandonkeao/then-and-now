@@ -15,4 +15,5 @@ Notable public changes are recorded here. Product hypotheses and private busines
 - Design tokens, foundational components, and `/system` specimen.
 - Supabase schema, row-level security, database tests, and generated type workflow.
 - Unit, browser, accessibility, and continuous-integration checks.
+- Manually dispatched hosted smoke checks for public, protected, and synthetic-auth paths.
 - Public product, UX, design, technical, architecture, operations, and release documentation.

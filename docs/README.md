@@ -37,6 +37,7 @@ Code, tests, migrations, release notes, and deployed behavior show whether the i
 | How are responsibilities divided?                       | [Architecture](engineering/architecture.md)                               | Module boundaries and decision records              |
 | What should every surface look and behave like?         | [Design system](design/design-system.md)                                  | Tokens, components, `/system`, accessibility checks |
 | Where and how may the software run?                     | [Environments and deployment](operations/environments-and-deployment.md)  | CI, runtime guards, health checks                   |
+| How is a hosted environment connected and proven?       | [Provider bootstrap](operations/provider-bootstrap.md)                    | Hosted synthetic-auth smoke workflow                |
 | What outcome is each release meant to produce?          | [Release plan](project/release-plan.md)                                   | Release notes and passing gates                     |
 | Why was a consequential choice made?                    | [Decision records](decisions/README.md)                                   | Dated ADRs and superseding decisions                |
 

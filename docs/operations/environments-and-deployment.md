@@ -67,3 +67,5 @@ Application rollback redeploys the last known-good artifact. Database rollback i
 - OTP creates or resumes one user and preserves only a safe destination.
 - User A cannot query User B's profile, preferences, or unrelated Space.
 - No console error, failed request, or log line contains a token or private prose.
+
+The executable hosted check and required provider configuration are documented in [Provider bootstrap](./provider-bootstrap.md). It uses a short-lived synthetic account and removes that account after each run.

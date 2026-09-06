@@ -1,0 +1,40 @@
+name: Hosted Alpha smoke checks
+
+on:
+  workflow_dispatch:
+    inputs:
+      base_url:
+        description: Deployed preview or staging origin
+        required: true
+        type: string
+      environment:
+        description: GitHub environment containing the matching Supabase secrets
+        required: true
+        default: staging
+        type: environment
+
+permissions:
+  contents: read
+
+jobs:
+  smoke:
+    name: Public, protected, and synthetic-auth smoke
+    runs-on: ubuntu-latest
+    environment: ${{ inputs.environment }}
+    steps:
+      - uses: actions/checkout@v6
+      - uses: pnpm/action-setup@v6
+        with:
+          version: 10.26.1
+      - uses: actions/setup-node@v6
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm exec playwright install --with-deps chromium
+      - name: Run hosted smoke checks
+        run: pnpm test:smoke
+        env:
+          SMOKE_BASE_URL: ${{ inputs.base_url }}
+          SMOKE_SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SMOKE_SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}

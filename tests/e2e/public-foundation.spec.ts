@@ -45,6 +45,15 @@ test("health check exposes release state without caching", async ({ request }) =
   });
 });
 
+test("signed-out visitors cannot enter the private application", async ({ page }) => {
+  await page.goto("/app");
+
+  await expect(page).toHaveURL(/\/sign-in\?next=(?:%2F|\/)app$/);
+  await expect(
+    page.getByRole("heading", { name: "Sign in or create an account" }),
+  ).toBeVisible();
+});
+
 test("mobile marketing content does not overlap or scroll horizontally", async ({
   page,
 }) => {
