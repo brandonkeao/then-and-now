@@ -1,0 +1,2 @@
+-- Alpha 0.2 deliberately ships without personal or production-like seed data.
+-- Tests create isolated synthetic users and remove them after each run.

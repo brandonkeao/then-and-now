@@ -1,0 +1,76 @@
+name: Story or implementation task
+description: Define a user-observable or system outcome with testable acceptance criteria.
+title: "[Story] "
+labels:
+  - type:story
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Link the relevant Alpha requirement. Keep the issue small enough to verify independently.
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Outcome
+      description: What changes for a user or the system when this is complete?
+      placeholder: As a… I can… so that…
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Context and requirement
+      description: Link the canonical PRD, UX, architecture, or design section.
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: In scope
+      placeholder: List the behavior included in this ticket.
+    validations:
+      required: true
+  - type: textarea
+    id: non_scope
+    attributes:
+      label: Explicitly out of scope
+      placeholder: List adjacent behavior that remains elsewhere.
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: Use observable, testable checkboxes.
+      placeholder: |
+        - [ ] Given… when… then…
+        - [ ] Unauthorized access is denied.
+        - [ ] Empty, loading, and error states are handled.
+    validations:
+      required: true
+  - type: textarea
+    id: analytics
+    attributes:
+      label: Analytics and privacy
+      placeholder: Events added or not needed; prohibited private data considerations.
+    validations:
+      required: true
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencies, risks, and verification
+      placeholder: Blocked by; blocks; risk level; required tests.
+    validations:
+      required: true
+  - type: dropdown
+    id: effort
+    attributes:
+      label: Effort
+      options:
+        - XS
+        - S
+        - M
+        - L
+        - XL — decompose before Ready
+    validations:
+      required: true

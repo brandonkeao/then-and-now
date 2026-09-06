@@ -1,0 +1,37 @@
+.form {
+  display: grid;
+  max-width: var(--form-max);
+  gap: var(--space-6);
+}
+
+.acknowledgment {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: start;
+  gap: var(--space-3);
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  font-size: 0.875rem;
+}
+
+.acknowledgment input {
+  width: 1.125rem;
+  height: 1.125rem;
+  margin-top: 0.0625rem;
+  accent-color: var(--color-now);
+}
+
+.confirmed,
+.fieldError {
+  margin: 0;
+  font-size: 0.8125rem;
+  line-height: 1.45;
+}
+
+.confirmed {
+  color: var(--color-text-muted);
+}
+
+.fieldError {
+  color: var(--color-danger);
+}

@@ -1,0 +1,129 @@
+.main {
+  width: min(calc(100% - 2 * var(--space-6)), var(--app-content-max));
+  min-height: calc(100vh - 4rem);
+  margin-inline: auto;
+  padding-bottom: var(--space-20);
+}
+
+.ritual {
+  max-width: var(--ritual-content-max);
+}
+
+.section {
+  border-top: 0.0625rem solid var(--color-line);
+  padding-block: var(--space-8);
+}
+
+.sectionLabel {
+  margin-bottom: var(--space-3);
+  color: var(--color-text-accent);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.emptyQuestion {
+  max-width: 18ch;
+  margin-bottom: var(--space-6);
+  font-family: var(--font-narrative);
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  font-weight: 400;
+  line-height: 1.08;
+}
+
+.copy {
+  max-width: var(--prose-max);
+  color: var(--color-text-secondary);
+  font-family: var(--font-narrative);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+}
+
+.pairedPlaceholder {
+  display: grid;
+  max-width: 42rem;
+  grid-template-columns: 1fr 1fr;
+  border: 0.0625rem solid var(--color-line);
+  margin-block: var(--space-8);
+}
+
+.placeholderHalf {
+  display: grid;
+  min-height: 10rem;
+  place-items: center;
+  padding: var(--space-6);
+  color: var(--color-text-muted);
+  font-family: var(--font-narrative);
+  text-align: center;
+}
+
+.placeholderHalf:first-child {
+  border-right: 0.0625rem solid var(--color-line);
+  background: var(--color-then-surface);
+}
+
+.placeholderHalf:last-child {
+  background: var(--color-now-surface);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.settingsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  border-top: 0.0625rem solid var(--color-line);
+  border-left: 0.0625rem solid var(--color-line);
+}
+
+.settingsItem {
+  min-height: 9rem;
+  border-right: 0.0625rem solid var(--color-line);
+  border-bottom: 0.0625rem solid var(--color-line);
+  padding: var(--space-6);
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.settingsItem:hover {
+  background: var(--color-surface);
+  text-decoration: none;
+}
+
+.settingsItem h2 {
+  margin-bottom: var(--space-2);
+  font-size: 1rem;
+}
+
+.settingsItem p {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-family: var(--font-narrative);
+}
+
+.profilePanel {
+  max-width: var(--form-max);
+  border-top: var(--rule-emphasis);
+  padding-top: var(--space-8);
+}
+
+@media (max-width: 39.9375rem) {
+  .main {
+    width: min(calc(100% - 2 * var(--space-4)), var(--app-content-max));
+    padding-bottom: calc(var(--space-20) + 4rem);
+  }
+
+  .pairedPlaceholder,
+  .settingsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .placeholderHalf:first-child {
+    border-right: 0;
+    border-bottom: 0.0625rem solid var(--color-line);
+  }
+}

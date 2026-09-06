@@ -1,0 +1,327 @@
+.button {
+  display: inline-flex;
+  min-height: 2.75rem;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  border: 0.0625rem solid var(--color-action);
+  border-radius: var(--radius-control);
+  padding: var(--space-3) var(--space-6);
+  background: var(--color-action);
+  color: var(--color-action-text);
+  cursor: pointer;
+  font-weight: 600;
+  line-height: 1.25;
+  text-decoration: none;
+  transition:
+    background-color var(--duration-press) ease,
+    border-color var(--duration-press) ease,
+    transform var(--duration-press) ease;
+}
+
+.button:hover:not(:disabled) {
+  background: var(--color-action-hover);
+  border-color: var(--color-action-hover);
+  text-decoration: none;
+}
+
+.button:active:not(:disabled) {
+  transform: translateY(0.0625rem);
+}
+
+.button:disabled,
+.button[aria-disabled="true"] {
+  cursor: not-allowed;
+  opacity: 0.52;
+}
+
+.buttonSecondary {
+  background: var(--color-surface);
+  color: var(--color-text);
+}
+
+.buttonSecondary:hover:not(:disabled) {
+  background: var(--color-surface-subtle);
+  border-color: var(--color-action);
+}
+
+.buttonQuiet {
+  border-color: transparent;
+  background: transparent;
+  color: var(--color-text);
+}
+
+.buttonQuiet:hover:not(:disabled) {
+  border-color: var(--color-line);
+  background: var(--color-surface);
+}
+
+.buttonDanger {
+  border-color: var(--color-danger);
+  background: var(--color-danger);
+}
+
+.buttonBusy {
+  cursor: wait;
+}
+
+.spinner {
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 0.125rem solid currentColor;
+  border-right-color: transparent;
+  border-radius: 50%;
+  animation: spin 700ms linear infinite;
+}
+
+.field {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.label {
+  color: var(--color-text);
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.hint,
+.error {
+  margin: 0;
+  font-size: 0.8125rem;
+  line-height: 1.45;
+}
+
+.hint {
+  color: var(--color-text-muted);
+}
+
+.error {
+  color: var(--color-danger);
+}
+
+.input,
+.textarea,
+.select {
+  width: 100%;
+  min-height: 2.75rem;
+  border: 0.0625rem solid var(--color-line-control);
+  border-radius: var(--radius-control);
+  padding: var(--space-3) var(--space-4);
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-size: 1rem;
+  line-height: 1.35;
+  transition:
+    border-color var(--duration-press) ease,
+    background-color var(--duration-press) ease;
+}
+
+.textarea {
+  min-height: 8rem;
+  resize: vertical;
+  font-family: var(--font-narrative);
+  font-size: 1.0625rem;
+  line-height: 1.55;
+}
+
+.input:hover,
+.textarea:hover,
+.select:hover {
+  border-color: var(--color-text-secondary);
+}
+
+.input[aria-invalid="true"],
+.textarea[aria-invalid="true"],
+.select[aria-invalid="true"] {
+  border-color: var(--color-danger);
+}
+
+.input:disabled,
+.textarea:disabled,
+.select:disabled {
+  background: var(--color-surface-subtle);
+  color: var(--color-text-muted);
+  cursor: not-allowed;
+}
+
+.message {
+  display: grid;
+  grid-template-columns: 0.25rem 1fr;
+  gap: var(--space-3);
+  border-block: 0.0625rem solid var(--color-line);
+  padding-block: var(--space-4);
+  color: var(--color-text-secondary);
+}
+
+.message::before {
+  width: 0.25rem;
+  min-height: 100%;
+  background: var(--color-link);
+  content: "";
+}
+
+.messageSuccess::before {
+  background: var(--color-success);
+}
+
+.messageWarning::before {
+  background: var(--color-warning);
+}
+
+.messageError::before {
+  background: var(--color-danger);
+}
+
+.messageTitle {
+  margin: 0 0 var(--space-1);
+  color: var(--color-text);
+  font-weight: 650;
+}
+
+.messageBody {
+  margin: 0;
+}
+
+.badge {
+  display: inline-flex;
+  min-height: 1.5rem;
+  align-items: center;
+  border: 0.0625rem solid var(--color-line);
+  border-radius: 999px;
+  padding: var(--space-1) var(--space-2);
+  background: var(--color-surface);
+  color: var(--color-text-secondary);
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.badgeSuccess {
+  border-color: var(--color-success);
+  color: var(--color-success);
+}
+
+.badgeWarning {
+  border-color: var(--color-warning);
+  color: var(--color-warning);
+}
+
+.badgeAccent {
+  border-color: var(--color-then);
+  color: var(--color-then);
+}
+
+.pageHeader {
+  display: grid;
+  max-width: var(--ritual-content-max);
+  gap: var(--space-3);
+  padding-block: var(--space-12) var(--space-8);
+}
+
+.eyebrow {
+  margin: 0;
+  color: var(--color-text-accent);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  line-height: 1.35;
+  text-transform: uppercase;
+}
+
+.pageTitle {
+  margin: 0;
+  color: var(--color-text);
+  font-family: var(--font-display);
+  font-size: clamp(2.25rem, 7vw, 4rem);
+  font-weight: 400;
+  letter-spacing: -0.025em;
+  line-height: 0.98;
+}
+
+.pageDescription {
+  max-width: var(--prose-max);
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-family: var(--font-narrative);
+  font-size: 1.125rem;
+  line-height: 1.55;
+}
+
+.dialogOverlay {
+  position: fixed;
+  z-index: 50;
+  inset: 0;
+  background: color-mix(in srgb, var(--color-text) 55%, transparent);
+  animation: fadeIn var(--duration-enter) ease-out;
+}
+
+.dialogContent {
+  position: fixed;
+  z-index: 51;
+  top: 50%;
+  left: 50%;
+  width: min(calc(100vw - var(--space-8)), 31rem);
+  max-height: calc(100vh - var(--space-8));
+  overflow: auto;
+  transform: translate(-50%, -50%);
+  border: 0.0625rem solid var(--color-line);
+  border-radius: var(--radius-overlay);
+  padding: var(--space-8);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-dialog);
+  animation: dialogIn var(--duration-overlay) ease-out;
+}
+
+.dialogTitle {
+  margin-bottom: var(--space-3);
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+.dialogDescription {
+  margin-bottom: var(--space-6);
+  color: var(--color-text-secondary);
+}
+
+.dialogActions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: var(--space-3);
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+}
+
+@keyframes dialogIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, calc(-50% + var(--space-2)));
+  }
+}
+
+@media (max-width: 39.9375rem) {
+  .button {
+    width: 100%;
+  }
+
+  .pageHeader {
+    padding-block: var(--space-8) var(--space-6);
+  }
+
+  .dialogContent {
+    padding: var(--space-6);
+  }
+}

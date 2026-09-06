@@ -1,0 +1,65 @@
+name: Bug report
+description: Record expected behavior, reproduction, impact, and regression coverage.
+title: "[Bug] "
+labels:
+  - type:bug
+body:
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      options:
+        - Sev 1 / P0 — privacy, auth, reveal integrity, or destructive data loss
+        - Sev 2 / P1 — core flow blocked with no safe workaround
+        - Sev 3 / P2 — important failure with a safe workaround
+        - Sev 4 / P3 — low-impact or cosmetic
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Reproduction
+      placeholder: |
+        1. Starting state and account role
+        2. Action
+        3. Observed result
+    validations:
+      required: true
+  - type: textarea
+    id: impact
+    attributes:
+      label: User, data, and privacy impact
+      description: Never paste private contribution or response content.
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      placeholder: Release, browser/device, deployment, request or event ID.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Safe evidence
+      description: Scrub email, tokens, invitation codes, titles, prefaces, URLs, and response text.
+  - type: textarea
+    id: regression
+    attributes:
+      label: Regression test
+      placeholder: Which automated or manual test will prevent recurrence?
+    validations:
+      required: true

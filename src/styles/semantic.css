@@ -1,0 +1,23 @@
+:root {
+  --color-canvas: var(--bk-paper-100);
+  --color-surface: var(--bk-paper-50);
+  --color-surface-subtle: var(--bk-paper-200);
+  --color-surface-selected: var(--bk-paper-300);
+  --color-text: var(--bk-ink-950);
+  --color-text-secondary: var(--bk-ink-800);
+  --color-text-muted: var(--bk-ink-600);
+  --color-text-accent: var(--bk-rust-700);
+  --color-link: var(--bk-blue-700);
+  --color-focus: var(--bk-blue-700);
+  --color-success: var(--bk-green-700);
+  --color-warning: var(--bk-amber-800);
+  --color-danger: var(--bk-red-700);
+  --color-line: var(--bk-line-300);
+  --color-line-subtle: var(--bk-line-200);
+  --color-line-control: var(--bk-line-500);
+  --color-action: var(--bk-ink-950);
+  --color-action-text: var(--bk-paper-50);
+  --color-action-hover: var(--bk-ink-800);
+  --shadow-menu: 0 0.5rem 1.5rem rgb(23 23 19 / 10%);
+  --shadow-dialog: 0 1.125rem 3rem rgb(23 23 19 / 16%);
+}

@@ -1,0 +1,11 @@
+:root {
+  --color-then: var(--bk-rust-700);
+  --color-then-surface: #f0d9d1;
+  --color-now: var(--bk-blue-700);
+  --color-now-surface: #dce7f7;
+  --rule-emphasis: 0.25rem solid var(--bk-rust-600);
+  --app-content-max: 70rem;
+  --ritual-content-max: 52rem;
+  --prose-max: 43rem;
+  --form-max: 28rem;
+}

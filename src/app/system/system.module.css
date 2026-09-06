@@ -1,0 +1,125 @@
+.main {
+  width: min(calc(100% - 2 * var(--space-6)), var(--app-content-max));
+  margin-inline: auto;
+  padding-bottom: var(--space-20);
+}
+
+.section {
+  border-top: 0.0625rem solid var(--color-line);
+  padding-block: var(--space-8);
+}
+
+.section h2 {
+  margin-bottom: var(--space-6);
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.swatches {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+  border-top: 0.0625rem solid var(--color-line);
+  border-left: 0.0625rem solid var(--color-line);
+}
+
+.swatch {
+  min-height: 8rem;
+  border-right: 0.0625rem solid var(--color-line);
+  border-bottom: 0.0625rem solid var(--color-line);
+  padding: var(--space-4);
+}
+
+.swatchColor {
+  height: 3rem;
+  margin-bottom: var(--space-4);
+  background: var(--swatch-color);
+}
+
+.swatch p {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+}
+
+.typeSpecimens {
+  display: grid;
+  gap: var(--space-6);
+}
+
+.displayType,
+.narrativeType,
+.uiType,
+.monoType {
+  margin: 0;
+}
+
+.displayType {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 8vw, 6rem);
+  line-height: 0.9;
+}
+
+.narrativeType {
+  max-width: var(--prose-max);
+  font-family: var(--font-narrative);
+  font-size: 1.375rem;
+  line-height: 1.55;
+}
+
+.uiType {
+  font-family: var(--font-ui);
+  font-size: 1rem;
+}
+
+.monoType {
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.row,
+.formDemo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: var(--space-4);
+}
+
+.formDemo {
+  display: grid;
+  max-width: var(--form-max);
+}
+
+.stateGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: var(--space-4);
+}
+
+.paper {
+  --swatch-color: var(--color-canvas);
+}
+.surface {
+  --swatch-color: var(--color-surface);
+}
+.ink {
+  --swatch-color: var(--color-text);
+}
+.rust {
+  --swatch-color: var(--color-then);
+}
+.blue {
+  --swatch-color: var(--color-now);
+}
+.success {
+  --swatch-color: var(--color-success);
+}
+.warning {
+  --swatch-color: var(--color-warning);
+}
+.danger {
+  --swatch-color: var(--color-danger);
+}

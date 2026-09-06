@@ -1,0 +1,113 @@
+.header {
+  position: sticky;
+  z-index: 20;
+  top: 0;
+  display: grid;
+  min-height: 4rem;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: var(--space-8);
+  border-bottom: 0.0625rem solid var(--color-line);
+  padding-inline: clamp(var(--space-4), 4vw, var(--space-12));
+  background: color-mix(in srgb, var(--color-canvas) 96%, transparent);
+  backdrop-filter: blur(0.5rem);
+}
+
+.context {
+  overflow: hidden;
+  color: var(--color-text-muted);
+  font-size: 0.75rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.desktopNav,
+.mobileNav {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.link {
+  min-height: 2.75rem;
+  padding: var(--space-3) var(--space-4);
+  border-bottom: 0.125rem solid transparent;
+  color: var(--color-text-muted);
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.link:hover {
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.linkActive {
+  border-bottom-color: var(--color-text-accent);
+  color: var(--color-text);
+}
+
+.signOut {
+  display: inline;
+}
+
+.signOutButton {
+  min-height: 2.75rem;
+  border: 0;
+  padding: var(--space-3) var(--space-4);
+  background: transparent;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.signOutButton:hover {
+  color: var(--color-text);
+}
+
+.mobileNav {
+  display: none;
+}
+
+@media (max-width: 39.9375rem) {
+  .header {
+    position: static;
+    grid-template-columns: auto 1fr;
+  }
+
+  .context {
+    text-align: right;
+  }
+
+  .desktopNav {
+    display: none;
+  }
+
+  .mobileNav {
+    position: fixed;
+    z-index: 30;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: grid;
+    min-height: 4rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    border-top: 0.0625rem solid var(--color-line);
+    background: var(--color-surface);
+  }
+
+  .mobileNav .link {
+    display: grid;
+    place-items: center;
+    border-bottom: 0;
+    border-top: 0.1875rem solid transparent;
+    padding-inline: var(--space-2);
+    text-align: center;
+  }
+
+  .mobileNav .linkActive {
+    border-top-color: var(--color-text-accent);
+  }
+}
