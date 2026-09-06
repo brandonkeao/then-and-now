@@ -66,4 +66,10 @@ jobs:
       - run: pnpm db:start
       - run: pnpm db:lint
       - run: pnpm db:test
-      - run: pnpm db:types:check
+      - run: pnpm db:types
+      - uses: actions/upload-artifact@v4
+        with:
+          name: generated-database-types
+          path: src/shared/supabase/database.types.ts
+          retention-days: 1
+      - run: git diff --exit-code -- src/shared/supabase/database.types.ts
