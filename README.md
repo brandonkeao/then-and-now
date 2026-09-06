@@ -18,6 +18,7 @@ This repository is both the working application and a public, living example of 
 - Supabase migrations for profiles, preferences, private pair spaces, memberships, and content-free domain events.
 - Row-level security that defaults protected data to inaccessible.
 - Unit, browser, accessibility, migration, and RLS checks wired into CI.
+- A hosted smoke workflow for public, protected, and synthetic passwordless-auth paths.
 - Explicit local, preview, staging, and production environment boundaries.
 
 The invitation, contribution, mutual-reveal, reflection, and Chapter loop belongs to later Alpha slices. The distinction between **implemented**, **specified**, and **hypothesized** behavior is maintained throughout the documentation.
@@ -41,6 +42,7 @@ Start with the [documentation guide](docs/README.md) to see which question each 
 - [Architecture](docs/engineering/architecture.md)
 - [Raw design-system standard](docs/design/design-system.md)
 - [Environment and deployment model](docs/operations/environments-and-deployment.md)
+- [Provider bootstrap and hosted smoke runbook](docs/operations/provider-bootstrap.md)
 - [Release plan](docs/project/release-plan.md)
 - [Architecture decisions](docs/decisions/README.md)
 
@@ -93,6 +95,7 @@ Do not place a service-role key in a `NEXT_PUBLIC_` variable. Do not connect a p
 | `pnpm dev`            | Run the Next.js development server                                 |
 | `pnpm check`          | Run formatting, linting, types, unit tests, and a production build |
 | `pnpm test:e2e`       | Run desktop/mobile browser and accessibility tests                 |
+| `pnpm test:smoke`     | Verify a configured preview or staging deployment                  |
 | `pnpm db:start`       | Start the local Supabase stack and apply migrations                |
 | `pnpm db:lint`        | Lint the local database schema                                     |
 | `pnpm db:test`        | Run database and RLS tests                                         |
@@ -109,6 +112,7 @@ src/styles/              Primitive, semantic, and product-theme tokens
 supabase/migrations/     Versioned database changes
 supabase/tests/          Authorization and data-contract tests
 tests/e2e/               Browser and accessibility journeys
+tests/smoke/             Hosted public, protected, and synthetic-auth proof
 docs/                    Product-development concepts and specifications
 ```
 
