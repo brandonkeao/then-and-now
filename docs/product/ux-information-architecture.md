@@ -37,7 +37,8 @@ The user-facing object is an **Exchange**. Internal models may use `space`, `mem
 ### Public and access
 
 - `/` — product explanation and entry.
-- `/sign-in` — sign in or create an account by email.
+- `/sign-in?mode=signin` — regain an existing account by email without creating a user.
+- `/sign-in?mode=signup` — explicitly create an account by email; switching modes preserves only a safe `/app` destination.
 - `/verify` — short-lived code verification.
 - `/auth/confirm` — safe email-link callback.
 - `/i/[code]` — future invitation preview and accept flow.
@@ -82,7 +83,7 @@ The page leads with the outcome, demonstrates equal sealed objects, explains the
 
 ### Authentication
 
-The screen uses a concrete `Email me a code` action, keeps visible labels, preserves a safe product destination, and explains when local authentication is not configured. Verification distinguishes missing, invalid, and expired context without exposing account existence.
+The screen presents distinct sign-in and account-creation modes, uses a concrete email-code action, keeps visible labels, preserves a safe product destination, and explains when local authentication is not configured. Sign-in does not create an unknown user. Verification and provider failures remain recoverable without exposing whether an address already has an account.
 
 ### Onboarding
 

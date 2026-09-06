@@ -25,7 +25,7 @@ export default function MarketingPage() {
     <div className={styles.page}>
       <header className={styles.header}>
         <Wordmark />
-        <Link className={styles.headerAction} href="/sign-in">
+        <Link className={styles.headerAction} href="/sign-in?mode=signin">
           Sign in
         </Link>
       </header>
@@ -41,7 +41,7 @@ export default function MarketingPage() {
               too. When both are ready, you discover them together.
             </p>
             <div className={styles.heroActions}>
-              <Link className="button-link-primary" href="/sign-in">
+              <Link className="button-link-primary" href="/sign-in?mode=signup">
                 Start an Exchange
               </Link>
               <a className={styles.secondaryLink} href="#how-it-works">

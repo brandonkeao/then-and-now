@@ -147,6 +147,7 @@ Side states are `paused`, `closed_incomplete`, and `archived`. No timer reveals 
 As a member, I can sign up or sign in by email so my private Space is available across devices.
 
 - Authentication is managed and passwordless.
+- Account creation and returning-user sign in are distinct, and switching preserves only a safe product destination.
 - A confirmed display name, timezone, and 18+ acknowledgment are stored.
 - Destination and invitation context survive authentication safely.
 - Invalid, expired, and absent codes have explicit recovery.

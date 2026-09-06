@@ -24,6 +24,7 @@ Then & Now is a responsive web application with server-rendered routes, managed 
 ### TR-01 — Identity and sessions
 
 - Use managed email OTP authentication; never store application passwords.
+- Keep account creation explicit; returning-user sign in must not create an unknown user.
 - Validate the current user on the server before rendering protected content.
 - Refresh session cookies in the root request proxy.
 - Use HTTP-only, secure-in-production, same-site cookies for temporary authentication context.

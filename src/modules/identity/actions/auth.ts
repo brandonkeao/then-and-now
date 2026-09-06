@@ -9,6 +9,7 @@ import {
   getPendingAuthContext,
   setPendingAuthContext,
 } from "../lib/auth-context";
+import { authIntents, shouldCreateUserFor } from "../lib/auth-intent";
 import { safeAppPath } from "../lib/auth-path";
 
 export type AuthActionState = {
@@ -18,6 +19,7 @@ export type AuthActionState = {
 
 const emailSchema = z.object({
   email: z.string().trim().email("Enter a valid email address."),
+  intent: z.enum(authIntents),
   next: z.string().optional(),
 });
 
@@ -41,18 +43,22 @@ export async function requestSignInCode(
 
   const result = emailSchema.safeParse({
     email: formData.get("email"),
+    intent: formData.get("intent"),
     next: formData.get("next"),
   });
 
   if (!result.success) {
-    return { fieldErrors: { email: result.error.issues[0]?.message } };
+    const emailIssue = result.error.issues.find((issue) => issue.path[0] === "email");
+    return emailIssue
+      ? { fieldErrors: { email: emailIssue.message } }
+      : { formError: "Choose sign in or create account and try again." };
   }
 
   const destination = safeAppPath(result.data.next);
   const supabase = await createClient();
   const { error } = await supabase.auth.signInWithOtp({
     email: result.data.email,
-    options: { shouldCreateUser: true },
+    options: { shouldCreateUser: shouldCreateUserFor(result.data.intent) },
   });
 
   if (error) {

@@ -16,11 +16,25 @@ test("marketing page explains the product and reaches authentication", async ({
   ).toBeVisible();
 
   await page.getByRole("link", { name: "Start an Exchange" }).click();
-  await expect(page).toHaveURL(/\/sign-in$/);
+  await expect(page).toHaveURL(/\/sign-in\?mode=signup$/);
+  await expect(page.getByRole("heading", { name: "Create your account" })).toBeVisible();
   await expect(
-    page.getByRole("heading", { name: "Sign in or create an account" }),
+    page.getByRole("button", { name: "Create account with email" }),
   ).toBeVisible();
-  await expect(page.getByRole("button", { name: "Email me a code" })).toBeVisible();
+});
+
+test("account creation and returning-user sign in are distinct", async ({ page }) => {
+  await page.goto("/sign-in?mode=signin&next=/app/archive");
+  await expect(page.getByRole("heading", { name: "Sign in" })).toBeVisible();
+  await expect(
+    page.getByRole("button", { name: "Email me a sign-in code" }),
+  ).toBeVisible();
+
+  await page.getByRole("link", { name: "Create account" }).click();
+  await expect(page).toHaveURL(
+    /\/sign-in\?mode=signup&next=(?:%2F|\/)app(?:%2F|\/)archive$/,
+  );
+  await expect(page.getByRole("heading", { name: "Create your account" })).toBeVisible();
 });
 
 test("public foundation has no automatically detectable accessibility violations", async ({
@@ -49,9 +63,7 @@ test("signed-out visitors cannot enter the private application", async ({ page }
   await page.goto("/app");
 
   await expect(page).toHaveURL(/\/sign-in\?next=(?:%2F|\/)app$/);
-  await expect(
-    page.getByRole("heading", { name: "Sign in or create an account" }),
-  ).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Sign in" })).toBeVisible();
 });
 
 test("mobile marketing content does not overlap or scroll horizontally", async ({
