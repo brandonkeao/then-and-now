@@ -2,14 +2,16 @@
 title: Brand and product design standard
 document_id: DS-001
 status: accepted
-version: 0.2.0
+version: 0.2.1
 applies_to: Alpha 0.2+
 owner: Product Design
 visibility: public
-last_reviewed: 2026-09-06
+last_reviewed: 2026-09-07
 ---
 
 # Brand and Product Design Standard
+
+> **September 7 direction update:** [DS-002](iteration-2026-09-07.md) selects Editorial Keepsake and separate personal/product marketing experiences. This document's existing token/component values remain the Alpha 0.2 baseline until their detailed replacements are specified and implemented. The update does not certify a new runtime or change the product-behavior contract.
 
 ## What this standard does
 
@@ -25,7 +27,7 @@ The system hierarchy is:
 - **Shared product system:** Typography, spacing, accessible color semantics, controls, interactions, data patterns, and implementation conventions.
 - **Then & Now expression:** Product name, paired motif, cultural artifacts, privacy cues, and reveal behavior.
 
-Use approximately **70% shared system / 30% product expression**. Then & Now should feel related to Brandon’s site without looking like a consulting-site feature.
+Use shared craft with distinct product expression, not a numerical brand ratio. The earlier 70/30 figure was an exploration heuristic, not a required design target. The personal website leads with the person's work; Then & Now has its own marketing story and primary product identity.
 
 ## Evidence base
 
@@ -62,10 +64,10 @@ It should not read as couples therapy, a social feed, a media tracker, or a gami
 Endorsement rules:
 
 - Product name is primary inside the app.
-- “A Brandon Keao experiment” or “Made by Brandon Keao” appears on product marketing, auth footer, About, and settings.
+- A quiet maker credit may appear in an appropriate footer/About location; it must not compete with the product task or primary identity.
 - Do not place the BK mark beside the product wordmark in persistent app chrome.
 - Do not bring `Experience`, `Writing`, or `Work with me` navigation into the app.
-- Add the product to BrandonKeao.com through a product/lab page without making it the consulting homepage’s primary action before there is user evidence.
+- Keep the product a secondary reference on the personal homepage, with its own dedicated marketing page. Do not place a competing product exhibit beside the personal hero.
 
 The “common foundation, distinct expression” model is consistent with Carbon’s [ecosystem approach](https://preview.carbondesignsystem.com/getting-started/about-carbon).
 
@@ -77,10 +79,7 @@ The “common foundation, distinct expression” model is consistent with Carbon
 | Quiet Instrument | Compact sans UI, thin borders, sparse accents | Scales to products and data tools | Can become anonymous developer SaaS                    |
 | Intimate Archive | Cultural objects, chronology, reveal, memory  | Emotionally appropriate           | Can drift into media tracking or sentimental scrapbook |
 
-Recommended mix:
-
-- Shared system: 50% Editorial Grid / 40% Quiet Instrument / 10% product imagery.
-- Then & Now: 40% Editorial Grid / 25% Quiet Instrument / 35% Intimate Archive.
+The earlier territory percentages were composition heuristics, not acceptance criteria. The selected Editorial Keepsake direction now governs the next iteration: expressive red/paper marketing, readable narrative surfaces, and restrained task controls. Detailed pattern and type decisions remain reviewable; see [the iteration record](iteration-2026-09-07.md).
 
 ## Design principles
 

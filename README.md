@@ -41,6 +41,7 @@ Start with the [documentation guide](docs/README.md) to see which question each 
 - [Technical requirements](docs/engineering/technical-requirements.md)
 - [Architecture](docs/engineering/architecture.md)
 - [Raw design-system standard](docs/design/design-system.md)
+- [Selected design direction and implementation boundary](docs/design/iteration-2026-09-07.md)
 - [Environment and deployment model](docs/operations/environments-and-deployment.md)
 - [Provider bootstrap and hosted smoke runbook](docs/operations/provider-bootstrap.md)
 - [Release plan](docs/project/release-plan.md)
