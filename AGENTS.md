@@ -1,3 +1,17 @@
+# Then & Now — application instructions
+
+This repository owns current application code and public specifications. Start with `README.md`, `RELEASES.md` and the relevant document in `docs/README.md`; read only the product, engineering or design contract needed for the change. Private strategy and research are not public source material.
+
+Preserve the accepted release scope. Static design specimens do not prove real authentication, authorization, persistence or hosted readiness. New product behavior and deployment need their own authorized scope. Keep All Rights Reserved and relationship-neutral adult language unless an accepted decision changes them.
+
+Shared understanding of the system is part of delivery. Explain the meaningful components and how they are built, connected and changed for a product owner who need not write code. Maintain a layered source-backed map and concrete flow explanations in the existing engineering/design/operations documentation, including UI, modules, auth, data, AI, analytics, dependencies, delivery and tests as applicable. For material changes, explain purpose, construction, reasons/tradeoffs and downstream consequences, clearly separating current/proposed and verified/unverified behavior. Scale detail to the change; documentation is not proof of comprehension, and this rule adds no quiz or approval gate. Keep explanations public-safe.
+
+Inspect Git status and preserve unrelated changes. Use the Node/pnpm versions in `package.json`. Run change-appropriate checks from that file; `pnpm check` is the comprehensive local check. Supabase reset and database commands are not part of routine orientation; verify the target and authorization before any state-changing command. A local passing build does not certify the hosted smoke gate.
+
+When working inside Brandon OS, load the associated project's current context via that workspace's registry. A separate Git root or worktree may not inherit parent instructions. These public instructions remain usable without a private checkout. Do not copy private business, monetization, credentials, participant memories or raw research into public commits.
+
+At session end, use the shared `close-session` skill when available: update accepted public implementation context and relevant instructions here, return private product context to its owner, validate and commit only reviewed session changes in each owning repository. Without the skill, follow the same structured-context and scoped-commit contract. Preserve other work and report actual commit/push state; closing does not authorize deployment or public disclosure of private context.
+
 <!-- BEGIN:nextjs-agent-rules -->
 
 # This is NOT the Next.js you know
