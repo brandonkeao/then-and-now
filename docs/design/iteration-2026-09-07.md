@@ -1,21 +1,21 @@
 ---
 title: Design iteration — selected direction and implementation boundary
 document_id: DS-002
-status: accepted direction; detailed specification and implementation pending
-version: 0.1.0
+status: historical September 7 direction; superseded/reopened by current product review
+version: 0.2.0
 applies_to: Next design iteration after the Alpha 0.2 baseline
 owner: Product Design
 visibility: public
 last_reviewed: 2026-09-07
 ---
 
-# Evolving a design system without rewriting product behavior
+# September 7 Softbound direction (historical)
 
 A design review can select a visual direction before every component is specified or implemented. Keeping those states separate prevents a prototype from becoming an accidental product promise. This record explains the selected direction and the work still needed to translate it into the application.
 
-## Selected direction: Editorial Keepsake
+## What the September 7 review selected: Softbound
 
-The next iteration preserves warm paper, dark ink, bold red, editorial display typography, and readable narrative surfaces. Marketing can be expressive; authentication, settings, and writing tasks need calmer hierarchy and clear controls. Detailed typography and token revisions remain subject to review.
+The September 7 review selected **Softbound**: cornflower blue, ink text, butter primary actions, and paper reading surfaces. Newsreader 400 carries headings and recollections; DM Sans carries body text, controls, and forms. It superseded the earlier red/inverted-red product direction for that review. The maker's personal website retains red Editorial Keepsake. The [Softbound specification](softbound.md) records those historical values and component rules; it does not claim they were integrated into the Alpha application. The September 21 product reset reopened the product and visual direction, so no current palette is selected.
 
 The maker's personal website and Then & Now marketing have separate purposes:
 
@@ -25,7 +25,11 @@ The maker's personal website and Then & Now marketing have separate purposes:
 | Product marketing | The user's experience and the value of a shared record       | A quiet maker credit and related visual craft                  |
 | Application       | The current task, participant state, and next useful action  | Product identity is primary; no personal-portfolio navigation  |
 
-An inverted red/paper treatment is a design approach being developed for product marketing. Shared typography, spacing, rules, and interaction quality connect the properties without requiring identical layouts or a numerical shared-brand percentage.
+Cornflower is a marketing surface, with ink foreground and butter primary actions; the app uses quieter blue-wash and paper surfaces. Shared spacing discipline, readable narrative, thin rules, and interaction quality connect the properties without requiring identical palettes, typefaces, layouts, or a numerical shared-brand percentage.
+
+## Current boundary
+
+The September 21 reset reopens the product, brand, and design-system direction. This record remains public historical evidence of the September 7 Softbound exploration; it is not the current palette or an implementation mandate.
 
 ## What this does not change
 

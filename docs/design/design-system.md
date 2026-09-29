@@ -1,7 +1,7 @@
 ---
 title: Brand and product design standard
 document_id: DS-001
-status: accepted
+status: historical reference; current palette reopened
 version: 0.2.1
 applies_to: Alpha 0.2+
 owner: Product Design
@@ -11,7 +11,7 @@ last_reviewed: 2026-09-07
 
 # Brand and Product Design Standard
 
-> **September 7 direction update:** [DS-002](iteration-2026-09-07.md) selects Editorial Keepsake and separate personal/product marketing experiences. This document's existing token/component values remain the Alpha 0.2 baseline until their detailed replacements are specified and implemented. The update does not certify a new runtime or change the product-behavior contract.
+> **September 7 historical direction:** [DS-002](iteration-2026-09-07.md) records Softbound as the then-selected Then & Now exploration and preserves separate personal/product marketing experiences. [DS-003: Softbound](softbound.md) preserves that palette, typography, and action treatment as a historical reference, superseding the earlier red/inverted-red proposals for that review. The September 21 product reset reopened the visual direction; no current palette is selected. The existing values below document the Alpha 0.2 baseline, and none of these records certifies runtime integration, a release, or a product-behavior change.
 
 ## What this standard does
 
@@ -79,7 +79,7 @@ The “common foundation, distinct expression” model is consistent with Carbon
 | Quiet Instrument | Compact sans UI, thin borders, sparse accents | Scales to products and data tools | Can become anonymous developer SaaS                    |
 | Intimate Archive | Cultural objects, chronology, reveal, memory  | Emotionally appropriate           | Can drift into media tracking or sentimental scrapbook |
 
-The earlier territory percentages were composition heuristics, not acceptance criteria. The selected Editorial Keepsake direction now governs the next iteration: expressive red/paper marketing, readable narrative surfaces, and restrained task controls. Detailed pattern and type decisions remain reviewable; see [the iteration record](iteration-2026-09-07.md).
+The earlier territory percentages were composition heuristics, not acceptance criteria. The September 7 Softbound selection is retained as historical reference: cornflower/paper marketing, Newsreader narrative, DM Sans controls, and butter primary actions. The September 21 reset reopened the product and visual direction, so no palette currently governs the next iteration. The older territory descriptions remain baseline history; see [the iteration record](iteration-2026-09-07.md).
 
 ## Design principles
 
